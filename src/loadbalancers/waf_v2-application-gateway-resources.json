@@ -169,8 +169,7 @@
           {
             "name": "es-app-gateway-sslcert",
             "properties": {
-              "data": "[parameters('applicationGatewaySettings').certBlob]",
-              "password": "[parameters('applicationGatewaySettings').certPassword]"
+              "keyVaultSecretId": "[parameters('applicationGatewaySettings').keyVaultSecretId]"
             }
           }
         ],
@@ -291,6 +290,12 @@
             }
           }
         ]
+      },
+      "identity": {
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+          "[parameters('applicationGatewaySettings').userAssignedIdentityId]": {}
+        }
       }
     }
   ],

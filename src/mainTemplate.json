@@ -1275,6 +1275,20 @@
         "description": "The password for the PKCS#12 archive (.p12/.pfx) containing the key and certificate for the Application Gateway."
       }
     },
+    "appGatewayKeyVaultSecretId": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "Key vault ID of ssl cert for gateway"
+      }
+    },
+    "appGatewayUserAssignedIdentityId": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "UAI to assign to gateway to allow it to get ssl cert"
+      }
+    },
     "appGatewayWafStatus": {
       "type": "string",
       "defaultValue": "Enabled",
@@ -1965,6 +1979,8 @@
       "instanceCount": "[parameters('appGatewayCount')]",
       "certBlob": "[parameters('appGatewayCertBlob')]",
       "certPassword": "[parameters('appGatewayCertPassword')]",
+      "userAssignedIdentityId": "[parameters('appGatewayUserAssignedIdentityId')]",
+      "keyVaultSecretId": "[parameters('appGatewayKeyVaultSecretId')]",
       "firewallStatus": "[parameters('appGatewayWafStatus')]",
       "firewallMode": "[parameters('appGatewayWafMode')]",
       "backendCert": "[parameters('appGatewayEsHttpCertBlob')]",
