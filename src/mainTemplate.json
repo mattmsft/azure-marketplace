@@ -1232,7 +1232,8 @@
       "defaultValue": "Standard",
       "allowedValues": [
         "Standard",
-        "WAF"
+        "WAF",
+        "WAF_V2"
       ],
       "metadata": {
         "description": "The tier of the Application Gateway. Required when selecting Application Gateway for load balancing"
@@ -1244,7 +1245,8 @@
       "allowedValues": [
         "Small",
         "Medium",
-        "Large"
+        "Large",
+        "WAF_V2"
       ],
       "metadata": {
         "description": "The size of the Application Gateway. Medium or above is recommended for Production clusters, and required when using WAF tier"
@@ -1958,7 +1960,7 @@
       }
     },
     "applicationGatewaySettings": {
-      "skuName": "[concat(parameters('appGatewayTier'), '_', parameters('appGatewaySku'))]",
+      "skuName": "[parameters('appGatewaySku')]",
       "tier": "[parameters('appGatewayTier')]",
       "instanceCount": "[parameters('appGatewayCount')]",
       "certBlob": "[parameters('appGatewayCertBlob')]",
