@@ -149,7 +149,10 @@
         "tier": "Regional"
       },
       "properties": {
-        "publicIPAllocationMethod": "Dynamic"
+        "publicIPAllocationMethod": "Static",
+        "dnsSettings": {
+          "domainNameLabel": "[parameters('applicationGatewaySettings').domainNameLabel]"
+        }
       }
     },
     {

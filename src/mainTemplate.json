@@ -1282,6 +1282,13 @@
         "description": "Key vault ID of ssl cert for gateway"
       }
     },
+    "appGatewayDomainNameLabel": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "domain name label gateway"
+      }
+    },
     "appGatewayUserAssignedIdentityId": {
       "type": "string",
       "defaultValue": "",
@@ -1981,6 +1988,7 @@
       "certPassword": "[parameters('appGatewayCertPassword')]",
       "userAssignedIdentityId": "[parameters('appGatewayUserAssignedIdentityId')]",
       "keyVaultSecretId": "[parameters('appGatewayKeyVaultSecretId')]",
+      "domainNameLabel": "[parameters('appGatewayDomainNameLabel')]",
       "firewallStatus": "[parameters('appGatewayWafStatus')]",
       "firewallMode": "[parameters('appGatewayWafMode')]",
       "backendCert": "[parameters('appGatewayEsHttpCertBlob')]",
