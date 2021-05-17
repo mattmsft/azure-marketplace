@@ -1107,6 +1107,7 @@
     },
     "securityBootstrapPassword": {
       "type": "securestring",
+      "defaultValue": "",
       "metadata": {
         "description": "Password for the bootstrap.password to add to the keystore in 6.x. If no value is supplied, a 13 character password will be generated using the uniqueString() function"
       }
@@ -1119,30 +1120,35 @@
     },
     "securityKibanaPassword": {
       "type": "securestring",
+      "defaultValue": "",
       "metadata": {
         "description": "Password for the built-in 'kibana' user. Should be 12 characters or more, with a minimum of 6 characters"
       }
     },
     "securityLogstashPassword": {
       "type": "securestring",
+      "defaultValue": "",
       "metadata": {
         "description": "Password for the built-in 'logstash_system' user. Should be 12 characters or more, with a minimum of 6 characters"
       }
     },
     "securityBeatsPassword": {
       "type": "securestring",
+      "defaultValue": "",
       "metadata": {
         "description": "Password for the built-in 'beats_system' user. Should be 12 characters or more, with a minimum of 6 characters. Required for Elasticsearch 6.3.0+ when xpackPlugins is 'Yes'"
       }
     },
     "securityApmPassword": {
       "type": "securestring",
+      "defaultValue": "",
       "metadata": {
         "description": "Password for the built-in 'apm_system' user. Should be 12 characters or more, with a minimum of 6 characters. Required for Elasticsearch 6.5.0+ when xpackPlugins is 'Yes'"
       }
     },
     "securityRemoteMonitoringPassword": {
       "type": "securestring",
+      "defaultValue": "",
       "metadata": {
         "description": "Password for the built-in 'remote_monitoring_user' user. Should be 12 characters or more, with a minimum of 6 characters. Required for Elasticsearch 6.5.0+ when xpackPlugins is 'Yes'"
       }

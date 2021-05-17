@@ -650,6 +650,8 @@ apply_security_settings()
       log "[apply_security_settings] did not see green security index"
     fi
 
+# No need to update other accounts
+:'
     #update builtin `kibana`/`kibana_system` account
     local ESCAPED_USER_KIBANA_PWD=$(escape_pwd $USER_KIBANA_PWD)
     local KIBANA_JSON=$(printf '{"password":"%s"}\n' $ESCAPED_USER_KIBANA_PWD)
@@ -704,6 +706,7 @@ apply_security_settings()
       exit 10
     fi
     log "[apply_security_settings] updated built-in remote_monitoring_user user password" 
+'
 }
 
 create_keystore_if_not_exists()
